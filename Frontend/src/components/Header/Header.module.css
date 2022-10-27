@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Roboto+Mono:ital@1&display=swap');
+
+.header {
+    display: flex;
+    grid-area: h;
+    background-color: #040f20e8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    display: flex;
+    position: relative;
+    top: 40px;
+    width: 150px;
+    height: 150px;
+}

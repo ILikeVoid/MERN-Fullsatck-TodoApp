@@ -1,0 +1,43 @@
+.carouselBox {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.item1 {
+    color: dimgrey;
+    background-image: url("../../../assets/images/wow drag.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.item2 {
+    color: silver;
+    background-image: url("../../../assets/images/wow .webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.item3 {
+    color: silver;
+    background-image: url("../../../assets/images/inst.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.items {
+    padding: 7rem;
+}
+
+.button {
+    font-size: 20px;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: limegreen;
+    cursor: pointer;
+}
+

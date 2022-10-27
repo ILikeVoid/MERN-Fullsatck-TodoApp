@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.todo {
+    width: 800px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.button {
+    background-color: limegreen;
+    margin-left: 10px;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+}

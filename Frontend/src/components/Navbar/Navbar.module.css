@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    color: silver;
+}
+
+.item img {
+    width: 30px;
+    height: 30px;
+}
+
+.text {
+    padding-left: 5px;
+    font-size: 30px;
+    color: silver;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.todo {
+    padding-left: 20px;
+}
