@@ -17,4 +17,9 @@ export const todosAPI = {
                 this.getTodos(setTodo)
             })
     },
+    updateTodos(id, text, setText){
+        axios.post(`${baseURL}/update`, {id, text})
+            .then(data => console.log(data))
+
+    }
 }
