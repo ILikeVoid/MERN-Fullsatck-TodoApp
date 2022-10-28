@@ -8,8 +8,8 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
-                <Header/>
-                <div className='App-content'>
+                    <Header/>
+                <div className='content'>
                     <Routes>
                         <Route path='/todo/' element={<TodoContainer/>}/>
                         <Route path='/home/' element={<Home/>}/>

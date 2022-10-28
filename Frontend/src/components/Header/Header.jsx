@@ -1,15 +1,16 @@
 import React from 'react';
 import s from "./Header.module.css"
 import Navbar from "../Navbar/Navbar";
+import todoIcon from "../../assets/images/Microsoft_To-Do_icon.png"
 
 function Header() {
     return (
         <div className={s.header}>
-                <div className={s.icon}>
-                    <img src='https://cdn-icons-png.flaticon.com/512/4697/4697260.png'/>
-                </div>
             <div className={s.navbar}>
                 <Navbar/>
+            </div>
+            <div className={s.icon}>
+                <img className={s.logo} src={todoIcon}/>
             </div>
         </div>
     );
