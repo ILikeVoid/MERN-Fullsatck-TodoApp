@@ -20,7 +20,9 @@ const TodoContainer = () => {
         setText(text)
         setTodoId(_id)
     }
-
+    const deleteTodo = (setTodoId, setTodo) => {
+        todosAPI.deleteTodo(setTodoId, setTodo)
+    }
 
     return (
         <Todo todo={todo}
@@ -30,6 +32,8 @@ const TodoContainer = () => {
               addTodo={addTodo}
               updatingTodo={updatingTodo}
               updateMode={updateMode}
+              deleteTodo={deleteTodo}
+              setTodo={setTodo}
         />
     )
 }

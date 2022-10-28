@@ -25,5 +25,13 @@ export const todosAPI = {
                 this.getTodos(setTodo)
             })
             .catch(err => console.log(err))
+    },
+    deleteTodo(_id, setTodo){
+        axios.post(`${baseURL}/delete`, {_id})
+            .then(data => {
+                console.log(data)
+                this.getTodos(setTodo)
+            })
+            .catch((err) => console.log(err))
     }
 }

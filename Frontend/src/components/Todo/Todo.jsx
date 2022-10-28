@@ -3,7 +3,7 @@ import s from './Todo.module.css'
 import Items from "./Items/Items";
 
 
-const Todo = ({todo, text, isUpdating, changeTodo, addTodo, updatingTodo, updateMode}) => {
+const Todo = ({todo, text, isUpdating, changeTodo, addTodo, updatingTodo, updateMode, deleteTodo, setTodo}) => {
     return (
         <div className={s.main}>
             <div>
@@ -20,6 +20,7 @@ const Todo = ({todo, text, isUpdating, changeTodo, addTodo, updatingTodo, update
                     key={item._id}
                     todoText={item.text}
                     updateMode={() => updateMode(item._id, item.text)}
+                    deleteTodo={() => deleteTodo(item._id, setTodo)}
                 />)}
             </div>
         </div>
