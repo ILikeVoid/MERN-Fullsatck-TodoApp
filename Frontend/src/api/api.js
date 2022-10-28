@@ -3,13 +3,13 @@ import axios from "axios";
 const baseURL = 'http://localhost:5005'
 
 export const todosAPI = {
-    getTodos(setTodo){
+    getTodos(setTodo) {
         axios.get(baseURL).then(({data}) => {
             console.log('data ---> ', data)
             setTodo(data)
         })
     },
-    saveTodos(text, setText, setTodo){
+    saveTodo(text, setText, setTodo) {
         axios.post(`${baseURL}/save`, {text})
             .then(data => {
                 console.log(data)
@@ -17,9 +17,13 @@ export const todosAPI = {
                 this.getTodos(setTodo)
             })
     },
-    updateTodos(id, text, setText){
-        axios.post(`${baseURL}/update`, {id, text})
-            .then(data => console.log(data))
-
+    updateTodo(todoId, text, setTodo, setText, setIsUpdating) {
+        axios.post(`${baseURL}/update`, {_id: todoId, text})
+            .then(data => {
+                setText("")
+                setIsUpdating(false)
+                this.getTodos(setTodo)
+            })
+            .catch(err => console.log(err))
     }
 }

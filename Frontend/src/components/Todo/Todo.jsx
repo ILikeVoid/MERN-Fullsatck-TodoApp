@@ -3,7 +3,7 @@ import s from './Todo.module.css'
 import Items from "./Items/Items";
 
 
-const Todo = ({todo, text, changeTodo, addTodo}) => {
+const Todo = ({todo, text, isUpdating, changeTodo, addTodo, updatingTodo, updateMode}) => {
     return (
         <div className={s.main}>
             <div>
@@ -13,8 +13,14 @@ const Todo = ({todo, text, changeTodo, addTodo}) => {
                        value={text}
                        onChange={changeTodo}
                 />
-                <input className={s.button} onClick={addTodo} type='button' value='Save'/>
-                {todo.map((item) => <Items key={item._id} todoText={item.text}/>)}
+                <input className={s.button}
+                       onClick={isUpdating ?  updatingTodo : addTodo}
+                       type='button' value={isUpdating ? "update" : "save"}/>
+                {todo.map((item) => <Items
+                    key={item._id}
+                    todoText={item.text}
+                    updateMode={() => updateMode(item._id, item.text)}
+                />)}
             </div>
         </div>
     );
