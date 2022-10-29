@@ -2,7 +2,7 @@ import React, {Children, cloneElement, useEffect, useRef, useState} from 'react'
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import s from './Carousel.module.css'
 
-const PAGE_WIDTH = 1400
+const PAGE_WIDTH = 1280
 
 function Carousel({children}) {
     const [pages, setPages] = useState([])
